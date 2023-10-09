@@ -1,0 +1,25 @@
+@import '~node_modules/bootstrap/scss/bootstrap';
+
+.navbar {
+  padding: 0;
+  --bs-navbar-brand-padding-y: 0;
+  
+  .container-fluid {
+    --bs-gutter-x: 0;
+    justify-content: flex-start;
+  }
+
+  .nav-item {
+    color: #99A2AD;
+  }
+
+  .highlight {
+    color: #fff;
+  }
+
+  .nav-profile {
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+}
