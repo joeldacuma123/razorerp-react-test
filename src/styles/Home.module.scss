@@ -1,0 +1,72 @@
+:export {
+  borderBody: 0.5px solid rgba(0, 0, 1, 0.1);
+}
+
+.main {
+  padding: 10px;  
+}
+
+.form {
+  width: 100%;
+}
+
+.formTitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.buttonGroup {
+  display: flex;
+}
+
+.buttonContainer {
+  margin-right: 10px;
+}
+
+.outlineButton {
+  --bs-btn-border-color: #B0B8C0 !important;
+}
+
+.outlineCalendarButton {
+  --bs-btn-border-color: #B0B8C0 !important;
+  color: #000000 !important;
+} 
+
+.bigOutlineButton {
+  padding: 20px 100px !important;
+  width: 100%;
+}
+
+.bigOutlineButtonTrucking {
+  padding: 20px 100px !important;
+  width: 100%;
+  --bs-btn-bg: #1287FD !important;
+}
+
+.bigOutlineButtonCarrier {
+  padding: 20px 100px !important;
+  width: 100%;
+  --bs-btn-bg: #fff !important;
+}
+
+.iconContainer {
+  margin-bottom: 10px;
+}
+
+.buttonText {
+  font-size: 16px;
+}
+
+.buttonTextCarrier {
+  font-size: 16px;
+  color: #000000;
+}
+
+.notesContainer {
+  border: 1px solid #D3DAE3;
+}
+
+.notesContainerBody {
+  border: 1px solid #D3DAE3;
+  padding: 10px 20px;
+}

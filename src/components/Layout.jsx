@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import NavbarSection from "./NavbarSection";
+import styles from "@/styles/Home.module.scss";
 
 
 export default function Layout({ children }) {
@@ -8,7 +9,9 @@ export default function Layout({ children }) {
     <>
       <Navbar />
       <NavbarSection />
-      <div className="container-fluid">{children}</div>
+      <div className={styles.main}>
+        {children}
+      </div>
     </>
   );
 }

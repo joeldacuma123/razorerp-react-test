@@ -1,9 +1,25 @@
 @import '~node_modules/bootstrap/scss/bootstrap';
 
+body {
+  background: #EFF3F7;
+}
+
+header {
+  background-color: #fff;
+}
+
+.nav {
+  --bs-nav-link-padding-x: 1rem;
+}
+
+.nav-scroller {
+  background-color: #fff;
+}
+
 .navbar {
   padding: 0;
   --bs-navbar-brand-padding-y: 0;
-  
+
   .container-fluid {
     --bs-gutter-x: 0;
     justify-content: flex-start;
@@ -22,4 +38,59 @@
     justify-content: flex-end;
     margin-right: 20px;
   }
+}
+
+.border-bottom {
+  border-bottom: 2px solid #dee2e6 !important;
+}
+
+.nav-link {
+  color: #000000;
+}
+
+ a.nav-scroller.nav-link:hover {
+    border-bottom: 3px solid #0d6efd !important;
+  }
+
+.nav-underline .nav-link.active, .nav-underline .show > .nav-link {
+  border-bottom: 3px solid #0d6efd !important;
+}
+
+a.tab.nav-link.active {
+  padding: 15px 5px;
+  border-bottom: 3px solid #0d6efd !important;
+}
+
+a.tab.nav-link {
+  padding: 15px 5px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-container {
+  margin: 5px;
+  width: 32%;
+}
+
+.back-btn {
+  --bs-btn-bg: #F8FAFB;
+  --bs-btn-border-color: #D3DAE3;
+  --bs-btn-hover-bg: #fff;
+  padding: 10px;
+}
+
+.normal-btn {
+  --bs-btn-bg: #FFF;
+  --bs-btn-border-color: #D3DAE3;
+  --bs-btn-color: #000000;
+  --bs-btn-hover-border-color: #0d6efd;
+}
+
+.title-danger {
+  color: red;
 }
