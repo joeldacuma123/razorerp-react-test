@@ -94,3 +94,17 @@ a.tab.nav-link {
 .title-danger {
   color: red;
 }
+
+li.notes.nav-item {
+  width: 170px;
+  text-align: center;
+}
+
+ul.files.nav {
+  justify-content: space-evenly;
+}
+
+li.files.nav-item {
+  width: 40%;
+  text-align: center;
+}

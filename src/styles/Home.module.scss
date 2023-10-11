@@ -19,6 +19,11 @@
   display: flex;
 }
 
+.buttonGroupReference {
+  display: flex;
+  margin-left: 15px;
+}
+
 .buttonContainer {
   margin-right: 10px;
 }
@@ -66,7 +71,31 @@
   border: 1px solid #D3DAE3;
 }
 
+.fileImageContainer {
+  border: 1px dashed #D3DAE3;
+  border-bottom: 0.5px solid #D3DAE3;
+}
+
+.fileImageContainerBody {
+  border: 1px dashed #D3DAE3;
+  border-top: 0.5px solid #D3DAE3;
+}
+
+.fileImageContainerContent {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
 .notesContainerBody {
   border: 1px solid #D3DAE3;
   padding: 10px 20px;
+}
+
+.fileContentText {
+  color: #697482;
+}
+
+.fileContentSubtitle {
+  font-size: 12px;
 }

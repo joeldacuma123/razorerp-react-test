@@ -9,6 +9,7 @@ import { Form,
 import Union from '../../public/images/Union.png';
 import Truck from '../../public/images/Truck.png';
 import Client from '../../public/images/Client.png';
+import Document from '../../public/images/Document.png';
 import Image from 'next/image';
 
 
@@ -239,14 +240,14 @@ export default function Home() {
              <Col md={6}>
               <div className={styles.notesContainer}>
                 <ul className="nav nav-underline ps-4">
-                  <li class="nav-item">
-                    <a class="tab nav-link active" href="#">Work Instructions</a>
+                  <li className="notes nav-item">
+                    <a className="tab nav-link active" href="#">Work Instructions</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="tab nav-link" href="#">Internal Notes</a>
+                  <li className="notes nav-item">
+                    <a className="tab nav-link" href="#">Internal Notes</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="tab nav-link" href="#">Field Notes</a>
+                  <li className="notes nav-item">
+                    <a className="tab nav-link" href="#">Field Notes</a>
                   </li>
                 </ul>
               </div>
@@ -273,7 +274,133 @@ export default function Home() {
         </div>        
       </div>
       <div style={{border: styles.borderBody}} className="my-3 p-4 bg-body rounded shadow-sm">
-
+        <h5 className="pb-2 mb-0">
+          Files and Images
+        </h5>
+        <div className="d-flex text-body-secondary pt-3">
+          <Form className={styles.form}>
+            <Row>
+              <Col md={6}>
+                <div className={styles.fileImageContainer}>
+                  <ul className="files nav nav-underline ps-4">
+                    <li className="files nav-item">
+                      <a className="tab nav-link active" href="#">Files</a>
+                    </li>
+                    <li className="files nav-item">
+                      <a className="tab nav-link" href="#">Images</a>
+                    </li>
+                  </ul>                    
+                </div> 
+                <div className={styles.fileImageContainerBody}>
+                  <Row>
+                    <Col md={12}>
+                      <div className={styles.fileImageContainerContent}>
+                        <div>
+                          <div className="d-flex flex-row">
+                            <Image className="mx-2" src={Document}/>
+                            <h6 className={styles.fileContentText}>Drag & Drop or Browse</h6>
+                          </div>
+                          <p className={styles.fileContentSubtitle}>.PDF, .docx, .xlsx are allowed. Max 10mb</p>
+                        </div>
+                      </div>
+                    </Col>
+                  </Row>
+                </div> 
+              </Col>
+            </Row>            
+          </Form>          
+        </div>  
+      </div>
+      <div style={{border: styles.borderBody}} className="my-3 p-4 bg-body rounded shadow-sm">
+        <h5 className="pb-2 mb-0">
+          Tags
+        </h5>
+        <div className="pt-3">
+          <Form>
+            <Row>
+              <Col md={12}>
+                <Input type="textarea" placeholder="Enter Notes here..." />              
+              </Col> 
+            </Row>
+          </Form>
+        </div>
+      </div>
+      <div style={{border: styles.borderBody}} className="my-3 p-4 bg-body rounded shadow-sm">
+        <h5 className="pb-2 mb-0">
+          Estimated Equipment
+        </h5> 
+        <div className="d-flex text-body-secondary pt-3">
+          <Form className={styles.form}>
+            <FormGroup>
+             <Row>
+                <Col md={6}>
+                  <Label className={styles.formTitle}>
+                    Pallet Count
+                  </Label>
+                  <Input type="select">
+                   <option>-- Please Select --</option> 
+                  </Input>                
+                </Col>
+                <Col md={6}>
+                 <Label className={styles.formTitle}>
+                   Net Weight
+                  </Label>
+                  <Input placeholder="Input text" />
+                </Col>
+              </Row>
+            </FormGroup>
+          </Form>
+        </div>       
+      </div>
+      <div style={{border: styles.borderBody}} className="my-3 p-4 bg-body rounded shadow-sm">
+      <h5 className="pb-2 mb-0">
+          References
+      </h5> 
+        <div className="d-flex text-body-secondary pt-3">
+          <Form className={styles.form}>
+            <FormGroup>
+             <Row>
+                <Col md={6}>
+                  <Label className={styles.formTitle}>
+                  BOL
+                  </Label>
+                  <Input placeholder="Input text" />            
+                </Col>
+                <Col md={6}>
+                 <Label className={styles.formTitle}>
+                  References 1
+                 </Label>
+                  <Input placeholder="Input text" />
+                </Col>
+              </Row>
+              <Row className="mt-2">
+                <Col md={6}>
+                  <Label className={styles.formTitle}>
+                  PO Number
+                  </Label>
+                  <Input placeholder="Input text" />            
+                </Col>
+                <Col md={6}>
+                 <Label className={styles.formTitle}>
+                  References 2
+                 </Label>
+                  <Input placeholder="Input text" />
+                </Col>                
+              </Row>
+              <Row className="mt-4">
+                <Col md={6}>
+                </Col>
+                <Col md={6}>
+                <div className={styles.buttonGroup}>
+                  <div className={styles.buttonContainer}>
+                    <Button className={styles.outlineButton} color="primary" outline> + Add More Reference</Button>
+                  </div>
+                </div>
+                </Col>
+              </Row>
+            </FormGroup>
+          </Form>
+        </div> 
       </div>
     </>
   );  
