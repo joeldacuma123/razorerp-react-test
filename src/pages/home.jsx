@@ -1,4 +1,5 @@
 import styles from '@/styles/Home.module.scss';
+
 import { Form, 
          Row,
          Col,
@@ -6,6 +7,9 @@ import { Form,
          Label,
          Input,
          Button } from 'reactstrap';
+
+import AutoCompleteInput from '@/components/AutoCompleteInput';
+
 import Union from '../../public/images/Union.png';
 import Truck from '../../public/images/Truck.png';
 import Client from '../../public/images/Client.png';
@@ -35,7 +39,7 @@ export default function Home() {
           <Col md={6}>
             <FormGroup>
               <Label className={styles.formTitle}>Pick Up Location</Label>
-              <Input placeholder="Input text" />
+              <AutoCompleteInput />
             </FormGroup>         
           </Col>
         </Row>
