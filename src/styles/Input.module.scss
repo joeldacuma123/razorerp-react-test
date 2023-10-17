@@ -2,3 +2,36 @@
 .listGroup {
   --bs-list-group-border-color: none;
 }
+
+.addButton {
+  background: rgba(18, 135, 253, 0.1);
+  color: #1067E1;
+  border: none;
+}
+
+.modal {
+  top: 10% !important;
+}
+
+.modalBody {
+  padding: 20px;
+}
+
+.form {
+    width: 100%;
+  }
+
+  .formTitle {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+
+  .buttonContainer {
+    margin-right: 10px;
+  }
