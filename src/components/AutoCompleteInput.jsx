@@ -24,6 +24,7 @@ export default function AutoCompleteInput() {
     "8642 Yule Street, Arvada CO 80007",
     "1693 Alice Court, Annapolis MD 21401",
   ]);
+  const [addressDetails, setAddressDetails] = useState("");
 
   const handleInputChange = (e) => {
     const value = e.target.value;
@@ -42,6 +43,21 @@ export default function AutoCompleteInput() {
   };
 
   const toggle = () => isModal(!modal);
+
+  const onChangeAddress = (value) => {
+    setAddressDetails(value);
+  };
+
+  const handleCreateAddress = () => {
+    const previousAutoComplete = autoComplete;
+    previousAutoComplete.push(addressDetails);
+    setAutoComplete(previousAutoComplete);
+    isModal(false);
+  };
+
+  const close = () => {
+    isModal(false);
+  };
 
   return (
     <div>
@@ -130,7 +146,7 @@ export default function AutoCompleteInput() {
                   <Label className={styles.formTitle}>
                       Street Address
                   </Label>
-                  <Input placeholder="Enter street address" />                   
+                  <Input onChange={(e) => onChangeAddress(e.target.value) } placeholder="Enter street address"  />                   
                 </Col>
                 <Col md={12}>
                   <Label className={styles.formTitle}>
@@ -167,10 +183,10 @@ export default function AutoCompleteInput() {
          <Row>
           <div className={styles.buttonGroup}>
             <div className={styles.buttonContainer}>
-              <Button outline>Cancel</Button>
+              <Button onClick={close} outline>Cancel</Button>
             </div>
             <div className={styles.buttonContainer}>
-              <Button color="primary">Create</Button>
+              <Button onClick={handleCreateAddress} color="primary">Create</Button>
             </div>
           </div>
         </Row>
